@@ -29,21 +29,24 @@ header {
   gap: 1rem;
   display: flex;
   justify-content: center;
+  align-items: center;
+
   flex-wrap: wrap;
 }
 
 .shop {
+    cursor: pointer;
   display: flex;
   background-color: #ffdf7f;
   padding: 0.8rem;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  flex-grow: 1;
 }
 @media screen and (max-width: 767px) {
   .shop {
     order: -1;
+    flex-grow: 1;
   }
 }
 .shop img {
@@ -78,7 +81,7 @@ main h2 {
 .card img {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  max-width: 100%;
+  width: 100%;
 }
 .bodyCard {
   /* padding: 1rem; */
@@ -108,7 +111,7 @@ footer {
   border-radius: 25px;
 }
 footer img {
-  max-width: 100%;
+  width: 100%;
 }
 footer p {
   padding-block: 1rem;
@@ -117,26 +120,67 @@ footer h3 {
   font-weight: 800;
 }
 @media screen and (min-width: 767px) {
-    body{
-        padding: 0px;
-    }
-    header {
-      border-radius: 0px;
-      align-items: center;
-      padding: 1rem;
-      flex-wrap: nowrap;
-    }
-    .shop{
-        padding-inline:5px ;
-    }
-    main{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    main h1{
-        width: 100%;
-        text-align: start;
-        word-spacing: 10px;
-        letter-spacing: 1px;
-    }
+  body {
+    padding: 0px;
   }
+  header {
+    border-radius: 0px;
+    padding: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main h1 {
+    width: 100%;
+    text-align: start;
+  }
+  footer {
+    margin-inline: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+  header {
+    flex-direction: column;
+    justify-content: start;
+  }
+  header a{
+    border-radius: 50px;
+    padding: 1.5rem 2rem;
+  }
+  .shop {
+    order: -1;
+    flex-grow: 0;
+  }
+  .shop a{
+    padding: 0.5rem 0rem;
+    font-size: 1.5em;
+  }
+
+  main {
+    justify-content: space-evenly;
+  }
+  .card {
+    width: 15rem;
+    margin: 0px;
+    margin-bottom: 2rem;
+  }
+  .bodyCard {
+    padding-inline: 1rem;
+    gap: 1rem;
+  }
+  .card button {
+    padding: 10px 14px;
+    font-weight: 900;
+  }
+  main h2 {
+    width: 100%;
+    text-align: start;
+  }
+
+}
